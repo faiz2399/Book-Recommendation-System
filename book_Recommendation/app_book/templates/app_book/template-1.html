@@ -1,0 +1,122 @@
+<html>
+<head>
+  {% load static %}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Netflix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'app_book/master.css'%}">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+
+  <script src="main.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="netflixLogo">
+        <a id="logo" href="#home"><img src="https://i.pinimg.com/736x/0a/a8/69/0aa869b4144fcaac0d2133c1557fa231.jpg" alt="Logo Image", width="200", 
+                height="1000"></a>
+      </div>      
+      <nav class="main-nav">                
+        <a href="#tvShows">My list</a>
+        <a href="#pop">Popular books</a>
+        <a href="#myList">Tensor flow recs</a>
+        <a href="#movies">KNN recs</a>
+        <a href="#originals">User-Item CF recs</a>
+        <a href="#content">Content Bases recs</a>
+  
+            
+      </nav>
+      <nav class="sub-nav">
+        <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
+        <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>
+        <a href="#">Logout</a>        
+      </nav>      
+    </header>
+    <!-- END OF HEADER -->
+    
+    <!-- MAIN CONTAINER -->
+    <section class="main-container" >
+      <div class="location" id="home">
+
+                <h1 id="tvShows">Books user read</h1>
+      <div class="box">
+                        {% for image in ImageUser %}
+            <a href=""><img src={{image}} alt="no image",width="288" 
+                height="159"></a>
+      {% endfor %}            
+      </div>
+      
+
+      </div>
+                <h1 id="pop">Popular Books</h1>
+          <div class="box">
+          {% for image in ImagePop %}
+            <a href=""><img src={{image}} alt="no image",width="288" 
+                height="159"></a>
+      {% endfor %}
+          </div>
+
+      <h1 id="myList">Top shows for user 254</h1>
+      <div class="box">
+                  {% for image in ImageTensor %}
+            <a href=""><img src={{image}} alt="no image",width="288" 
+                height="159"></a>
+      {% endfor %}                  
+      </div>
+      
+
+      <h1 id="movies">Books recommended to user using KNN</h1>
+      <div class="box">
+                         {% for image in ImageKnn %}
+            <a href=""><img src={{image}} alt="no image",width="288" 
+                height="159"></a>
+      {% endfor %}
+      </div>
+
+      <h1 id="originals">Books recommended using user-item CF</h1>
+      <div class="box">
+                                 {% for image in ImageUI %}
+            <a href=""><img src={{image}} alt="no image",width="288" 
+                height="159"></a>
+      {% endfor %}               
+      </div>
+
+        <h1 id="content">Books recommended using content based filtering</h1>
+      <div class="box">
+                                 {% for image in ImageCon %}
+            <a href=""><img src={{image}} alt="no image",width="288" 
+                height="159"></a>
+      {% endfor %}               
+      </div>
+    <!-- END OF MAIN CONTAINER -->
+
+    <!-- LINKS -->
+    <section class="link">
+      {% comment %} <div class="logos">
+        <a href="#"><i class="fab fa-facebook-square fa-2x logo"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x logo"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x logo"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x logo"></i></a>
+      </div> {% endcomment %}
+      <div class="sub-links">
+        <ul>
+
+          <li><a href="#">Help Center</a></li>
+    
+        </ul>
+      </div>
+    </section>
+    <!-- END OF LINKS -->
+
+    <!-- FOOTER -->
+    <footer>
+      <p> DS 5230 Project</p>
+      <p></p>
+    </footer>
+  </div>
+</body>
+</html>

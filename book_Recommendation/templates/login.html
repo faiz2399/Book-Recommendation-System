@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    {% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<link rel="stylesheet" href="{% static 'master2.css' %}">
+<title>Book recommendation </title>
+</head>
+<body>
+    <header class="showcase">
+        
+
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/0a/a8/69/0aa869b4144fcaac0d2133c1557fa231.jpg",  width="50" 
+                height="100">
+            </div>
+
+            <div class="showcase-content">
+                <div class="formm">
+                    <form method ="POST">
+                    {% csrf_token %}
+                        <h1>Login</h1>
+                        <div class="info">
+                       {{form}}
+                        </div>
+                        <div class="btn">
+                            <button class="btn-primary" type="submit">Sign In</button>
+                        </div>
+                  
+
+                    </form>
+    
+                </div>
+                
+              
+
+
+            </div>
+
+       
+           
+       
+    </header>
+
+
+</body>
+</html>
+
+
